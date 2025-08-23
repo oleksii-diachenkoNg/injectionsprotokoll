@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-bg-color: #f5f9fc;
+  --primary-color: #2d9cdb;
+  --secondary-color: #27ae60;
+  --primary-text-color: #e4deae;
+  --secondary-text-color: #828282;
+  --error-text-color: #eb5757;
+}
+
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+}
+
+ul {
+  list-style-type: none;
+}

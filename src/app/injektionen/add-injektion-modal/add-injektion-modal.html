@@ -1,0 +1,38 @@
+<div class="modal-wrapper">
+  <div class="modal">
+    <h1>Add Injektion</h1>
+
+    <form id="editForm" (ngSubmit)="addInjektion()">
+      <div class="input-group">
+        <label for="datum">Injektion Datum</label>
+        <input
+          type="date"
+          id="datum"
+          name="datum"
+          [(ngModel)]="injektionDatum"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="name">Insulin Name</label>
+        <input type="text" id="name" name="name" [(ngModel)]="injektionName" />
+      </div>
+
+      <div class="input-group">
+        <label for="groesse">Insulin Größe</label>
+        <input
+          type="number"
+          id="groesse"
+          name="groesse"
+          [(ngModel)]="injektionGroesse"
+        />
+      </div>
+
+      <div class="buttons-group">
+        <button type="submit" class="edit">Bearbeiten</button>
+      </div>
+    </form>
+
+    <button type="button" class="close" (click)="onClose()">X</button>
+  </div>
+</div>

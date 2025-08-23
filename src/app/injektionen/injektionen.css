@@ -1,0 +1,8 @@
+.injektionen {
+  padding: 40px;
+}
+
+.injektionen-list {
+  display: flex;
+  gap: 20px;
+}

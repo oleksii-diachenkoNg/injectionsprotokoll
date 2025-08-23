@@ -1,0 +1,28 @@
+.injektion {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 10px;
+  position: relative;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: var(--primary-text-color);
+}
+
+.datum {
+  margin-bottom: 7px;
+  border-bottom: 4px dotted var(--primary-color);
+}
+
+.edit-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.edit-button img {
+  height: 18px;
+}

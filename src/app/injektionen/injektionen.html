@@ -1,0 +1,14 @@
+<section class="injektionen">
+  <ul class="injektionen-list">
+    @for (inj of injektionen; track inj.id) {
+    <app-injektion [injektion]="inj" (edit)="onEditModalOpen($event)" />
+    }
+  </ul>
+</section>
+
+@if(editModalIsOpen()) {
+<app-edit-modal
+  (close)="onEditModalClose()"
+  [injektion]="currentInjektion()!"
+/>
+}

@@ -1,0 +1,9 @@
+<li class="injektion">
+  <p class="datum">{{ injektion().injektionDatum }}</p>
+  <p>Insulin: {{ injektion().injektionName }}</p>
+  <p>Dose: {{ injektion().injektionGroesse }}</p>
+
+  <button type="button" class="edit-button" (click)="editData()">
+    <img src="edit.svg" alt="" />
+  </button>
+</li>
