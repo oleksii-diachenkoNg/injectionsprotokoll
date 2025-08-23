@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './header.css'
 })
 export class Header {
+  add = output<void>();
 
+  openAddMenu() { 
+    this.add.emit();
+  }
 }

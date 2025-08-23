@@ -1,7 +1,6 @@
 import { Component, output, inject, input, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { Injektion } from '../injektion.model';
 import { injektionenService } from '../injektionen.service';
 
 @Component({
@@ -11,7 +10,6 @@ import { injektionenService } from '../injektionen.service';
   styleUrl: './add-injektion-modal.css'
 })
 export class AddInjektionModal {
-  injektion = input.required<Injektion>();
   close = output<void>();
 
   injektionenService = inject(injektionenService)
@@ -28,6 +26,7 @@ export class AddInjektionModal {
       injektionName: this.injektionName(),
       injektionGroesse: parseFloat(this.injektionGroesse())
     });
+    this.close.emit();
   }
 
   onClose() {
