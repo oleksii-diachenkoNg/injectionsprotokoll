@@ -1,4 +1,4 @@
-import { Component, output, inject, input, signal } from '@angular/core';
+import { Component, output, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { injektionenService } from '../injektionen.service';
