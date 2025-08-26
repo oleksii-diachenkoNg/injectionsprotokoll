@@ -1,4 +1,7 @@
-<li class="injektion">
+<li
+  class="injektion"
+  [class]="injektion().injektionName == 'Tresiba' ? 'long' : 'short'"
+>
   <p class="datum">{{ injektion().injektionDatum }}</p>
   <p>Insulin: {{ injektion().injektionName }}</p>
   <p>Dose: {{ injektion().injektionGroesse }}</p>

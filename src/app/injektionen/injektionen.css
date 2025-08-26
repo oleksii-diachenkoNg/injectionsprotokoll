@@ -3,6 +3,41 @@
 }
 
 .injektionen-list {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .injektionen {
+    padding: 30px;
+  }
+
+  .injektionen-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .injektionen {
+    padding: 20px;
+  }
+
+  .injektionen-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .injektionen {
+    padding: 10px;
+  }
+
+  .injektionen-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 350px) {
+  .injektionen-list {
+    grid-template-columns: 1fr;
+  }
 }
