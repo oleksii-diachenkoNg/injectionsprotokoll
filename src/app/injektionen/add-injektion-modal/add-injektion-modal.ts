@@ -19,6 +19,11 @@ export class AddInjektionModal {
   injektionGroesse = signal<string>('');
 
   addInjektion() { 
+    if(!this.injektionDatum() || !this.injektionName() || !this.injektionGroesse()) {
+      alert('Bitte alle Felder ausfüllen.');
+      return;
+    }
+
     let id = 'i' + this.injektionenService._injektionen().length + 1;
     this.injektionenService.addInjection({
       id: id,

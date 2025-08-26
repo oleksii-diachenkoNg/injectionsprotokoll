@@ -32,6 +32,11 @@ export class EditModal {
   }
 
   setEdits() {
+    if(!this.injektionDatum() || !this.injektionName() || !this.injektionGroesse()) {
+      alert('Bitte alle Felder ausfüllen.');
+      return;
+    }
+
     this.injektionenService.updateInjection({
       id: this.injektion().id,
       injektionDatum: this.injektionDatum(),
